@@ -38,10 +38,10 @@ export function Navbar() {
         </div>
       </div>
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
-        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-secondary transition duration-200">Introdução</Link>
-        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-secondary transition duration-200">Mapa Sonoro</Link>
-        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-secondary transition duration-200">O Projeto</Link>
-        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-secondary transition duration-200">Contatos</Link>
+        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-primary-foreground transition duration-200">Introdução</Link>
+        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-primary-foreground transition duration-200">O Projeto</Link>
+        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-primary-foreground transition duration-200">Mapa Sonoro</Link>
+        <Link href="/" className="block py-2 px-4 text-base hover:bg-primary hover:text-primary-foreground transition duration-200">Contatos</Link>
       </div>
     </nav>
   )
