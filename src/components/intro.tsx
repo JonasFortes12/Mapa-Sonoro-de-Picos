@@ -8,7 +8,7 @@ import Typist from 'react-typist-component';
 
 const Intro = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row h-max">
       
       
       {/* Lado esquerdo com a imagem de fundo e texto de boas-vindas */}
@@ -33,7 +33,7 @@ const Intro = () => {
         plugins={[
           Autoplay({
             delay: 15000,
-          }),
+          }), 
         ]}
         >
           <CarouselContent>
