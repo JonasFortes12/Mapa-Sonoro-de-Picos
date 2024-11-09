@@ -4,15 +4,18 @@ import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'; // Supondo que ShadcnUI tem um componente de carrossel.
 import Autoplay from "embla-carousel-autoplay"
 import Typist from 'react-typist-component';
+import { HiLightBulb } from "react-icons/hi";
+import { IoMdMusicalNotes } from "react-icons/io";
+import { GiPartyPopper } from "react-icons/gi";
+import { FaGuitar } from "react-icons/fa6";
 
 
 const Intro = () => {
   return (
-    <div className="flex flex-col md:flex-row h-max">
-      
-      
+    <div className="flex flex-col md:flex-row h-screen">
+    
       {/* Lado esquerdo com a imagem de fundo e texto de boas-vindas */}
-      <div className="flex-1 bg-cover bg-center relative h-screen  " style={{ backgroundImage: "url('/picos.jpg')" }}>
+      <div className="flex-1 bg-cover bg-center relative h-screen" style={{ backgroundImage: "url('/picos.jpg')" }}>
         <div className="absolute inset-0 bg-orange-500 bg-opacity-45 flex items-center justify-center">
           
           <Typist typingDelay={100} cursor={<span className='cursor'>|</span>} loop={true}>
@@ -27,7 +30,7 @@ const Intro = () => {
       </div>
 
       {/* Lado direito com o carrossel de texto explicativo */}
-      <div className="flex-1 flex items-center justify-center bg-background m-5">
+      <div className="flex-1 flex items-center justify-center bg-orange-100 p-5">
         
         <Carousel className="w-3/4 h-max"
         plugins={[
@@ -36,11 +39,10 @@ const Intro = () => {
           }), 
         ]}
         >
-          <CarouselContent>
-            
-            <CarouselItem className="">
+          <CarouselContent className="">
+            <CarouselItem className="w-full">
               <div className='border border-primary p-8 rounded-md shadow-lg'>
-                <h2 className='lg:text-6xl md:text-5xl sm:text-4xl'>01</h2>
+                <HiLightBulb className="text-primary lg:text-7xl md:text-6xl sm:text-5xl" />
                 <br />
                 <p className="text-sm md:text-base lg:text-lg text-justify">
                   A ideia deste mapa virtual surgiu durante apresentação de trabalho acadêmico na 
@@ -59,8 +61,8 @@ const Intro = () => {
 
 
             <CarouselItem className="">
-              <div className='border border-primary p-8 rounded-md shadow-lg'>
-                <h2 className='lg:text-6xl md:text-5xl sm:text-4xl'>02</h2>
+              <div className='border border-primary p-8 rounded-md'>
+                <IoMdMusicalNotes className="text-primary lg:text-7xl md:text-6xl sm:text-5xl" />
                 <br />
                 <p className="text-sm md:text-base lg:text-lg text-justify">
                 Neste Mapa Sonoro de Picos, convidamos você para ouvir as músicas interpretadas 
@@ -78,8 +80,8 @@ const Intro = () => {
             </CarouselItem>
 
             <CarouselItem className="">
-              <div className='border border-primary p-8 rounded-md shadow-lg'>
-                <h2 className='lg:text-6xl md:text-5xl sm:text-4xl'>03</h2>
+              <div className='border border-primary p-8 rounded-md'>
+                <GiPartyPopper className="text-primary lg:text-7xl md:text-6xl sm:text-5xl" />
                 <br />
                 <p className="text-sm md:text-base lg:text-lg text-justify">
                 Em seguida as músicas nacionais e internacionais das apresentações do 
@@ -94,8 +96,8 @@ const Intro = () => {
             </CarouselItem>
 
             <CarouselItem className="">
-              <div className='border border-primary p-8 rounded-md shadow-lg'>
-                <h2 className='lg:text-6xl md:text-5xl sm:text-4xl'>04</h2>
+              <div className='border border-primary p-8 rounded-md'>
+                <FaGuitar className="text-primary lg:text-7xl md:text-6xl sm:text-5xl" />
                 <br />
                 <p className="text-sm md:text-base lg:text-lg text-justify">
                 Finalizamos nosso mapa sonoro nesta cartografia, apresentando a sonoridade das 
@@ -115,6 +117,7 @@ const Intro = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+        
       </div>
     </div>
   );

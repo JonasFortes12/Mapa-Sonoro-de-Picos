@@ -6,14 +6,17 @@ import SoundMapComponent from "@/components/sound-map";
 export default function Home() {
   return (
     <>
-      
       <Navbar/>
-      <Intro/>
       
-      <div className="container mx-auto py-10">
+      <section id="introdução">
+        <Intro/>
+      </section>
+
+      <section id="mapa" className="container lg:my-24 md:my-16 sm:my-8 h-screen p-10">
         <SectionTitle>Mapa Sonoro</SectionTitle>
         <SoundMapComponent/>
-      </div>
+      </section>
+      
     </>
   );
 }
