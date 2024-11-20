@@ -12,9 +12,13 @@ export default function Home() {
         <Intro/>
       </section>
 
-      <section id="mapa" className="container lg:my-24 md:my-16 sm:my-8 h-screen p-10">
+      <section id="mapa" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
         <SectionTitle>Mapa Sonoro</SectionTitle>
         <SoundMapComponent/>
+      </section>
+
+      <section id="Contatos" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
+        <SectionTitle>Contatos</SectionTitle> 
       </section>
       
     </>

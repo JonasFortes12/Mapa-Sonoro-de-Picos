@@ -13,12 +13,29 @@ interface SoundPoint {
   position: [number, number]
   soundFile: string
   name: string
+  image: string
+  description: string
 }
 
 const soundPoints: SoundPoint[] = [
-  { id: 1, position: [-23.5505, -46.6333], soundFile: '/sounds/music.mp3', name: 'Som 1' },
-  { id: 2, position: [-23.5605, -46.6433], soundFile: '/sounds/music.mp3', name: 'Som 2' },
-  { id: 3, position: [-23.5405, -46.6233], soundFile: '/sounds/music.mp3', name: 'Som 3' },
+  { id: 1, position: [-7.085229, -41.471446], 
+    soundFile: '/sounds/music.mp3', 
+    name: 'Asas do Pagode, 1998.' ,
+    image: '/point_imgs/point1.png', 
+    description: 'Um encontro animado com o grupo Asas do Pazgode em 1998.'},
+
+  { id: 2, position: [-7.079547, -41.433069], 
+    soundFile: '/sounds/music.mp3', 
+    name: 'Show de Calouros, 1992.',
+    image: '/point_imgs/point2.png', 
+    description: 'Um evento memorável com talentos locais em 1992.' },
+
+  { id: 3, position: [-7.085356, -41.467399], 
+    soundFile: '/sounds/music.mp3', 
+    name: 'Encontro de Seresteiros.',
+    image: '/point_imgs/point3.png', 
+    description: 'Uma noite inesquecível com os melhores seresteiros da região.'},
+  
 ]
 
 const SoundMapComponent: React.FC = () => {
@@ -72,7 +89,7 @@ const SoundMapComponent: React.FC = () => {
   return (
     <Card className="w-4/5 max-w h-auto mx-auto">
       <CardContent className="p-6">
-        <MapContainer center={[-23.5505, -46.6333]} zoom={13} style={{ height: '500px', width: '100%' }}>
+        <MapContainer center={[-7.075605, -41.467326]} zoom={13} style={{ height: '500px', width: '100%' }}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -81,7 +98,9 @@ const SoundMapComponent: React.FC = () => {
             <Marker key={point.id} position={point.position} icon={customIcon}>
               <Popup>
                 <div className="flex flex-col items-center">
-                  <h3 className="font-bold mb-2">{point.name}</h3>
+                  <h3 className="font-bold mb-2 sm:text-base md:text-lg lg:text-lg">{point.name}</h3>
+                  <img src={point.image} alt={point.name} className="w-full h-32 object-cover rounded mb-2" />
+                  <p className="text-sm text-gray-600 mb-2">{point.description}</p>
                   <Button
                     onClick={() => activePointId === point.id && isPlaying ? stopSound() : playSound(point.soundFile, point.id)}
                     variant={activePointId === point.id && isPlaying ? "secondary" : "default"}
