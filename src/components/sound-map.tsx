@@ -89,7 +89,7 @@ const SoundMapComponent: React.FC = () => {
   return (
     <Card className="w-4/5 max-w h-auto mx-auto">
       <CardContent className="p-6">
-        <MapContainer center={[-7.075605, -41.467326]} zoom={13} style={{ height: '500px', width: '100%' }}>
+        <MapContainer center={[-7.075605, -41.467326]} zoom={13} style={{ height: '500px', width: '100%',  zIndex: 10}}>
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

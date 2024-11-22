@@ -18,7 +18,12 @@ export default function Home() {
         <SoundMapComponent/>
       </section>
 
-      <section id="Contatos" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
+      <section id="sobre" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
+        <SectionTitle>Sobre o Projeto</SectionTitle>
+        
+      </section>
+
+      <section id="contatos" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
         <SectionTitle>Contatos</SectionTitle>
         <Contacts/>
       </section>

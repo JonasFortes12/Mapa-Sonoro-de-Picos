@@ -69,7 +69,7 @@ export function Navbar() {
                 O Projeto
               </Link>
               <Link
-                href="/"
+                href="#contatos"
                 className="tracking-wide text-lg py-4 px-2 text-foreground font-semibold hover:text-primary transition duration-200"
               >
                 Contatos
