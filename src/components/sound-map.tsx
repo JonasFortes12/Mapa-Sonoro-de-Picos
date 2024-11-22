@@ -87,7 +87,7 @@ const SoundMapComponent: React.FC = () => {
   })
 
   return (
-    <Card className="w-4/5 max-w h-auto mx-auto">
+    <Card className="w-11/12 max-w h-auto mx-auto">
       <CardContent className="p-6">
         <MapContainer center={[-7.075605, -41.467326]} zoom={13} style={{ height: '500px', width: '100%',  zIndex: 10}}>
           <TileLayer

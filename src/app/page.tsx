@@ -3,6 +3,7 @@ import { Navbar } from "@/components/navbar";
 import SectionTitle from "@/components/section-title";
 import SoundMapComponent from "@/components/sound-map";
 import Contacts from "@/components/contacts";
+import AboutProject from "@/components/about";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
 
       <section id="sobre" className="container lg:my-16 md:my-8 sm:my-8 h-screen p-10">
         <SectionTitle>Sobre o Projeto</SectionTitle>
+        <AboutProject/>
         
       </section>
 
