@@ -19,19 +19,19 @@ interface SoundPoint {
 
 const soundPoints: SoundPoint[] = [
   { id: 1, position: [-7.085229, -41.471446], 
-    soundFile: '/sounds/music.mp3', 
+    soundFile: '/sounds/asas_do_pagode_compressed.mp3', 
     name: 'Asas do Pagode, 1998.' ,
     image: '/point_imgs/point1.png', 
     description: 'Um encontro animado com o grupo Asas do Pazgode em 1998.'},
 
   { id: 2, position: [-7.079547, -41.433069], 
-    soundFile: '/sounds/music.mp3', 
+    soundFile: '/sounds/show_de_calouros_compressed.mp3', 
     name: 'Show de Calouros, 1992.',
     image: '/point_imgs/point2.png', 
     description: 'Um evento memorável com talentos locais em 1992.' },
 
   { id: 3, position: [-7.085356, -41.467399], 
-    soundFile: '/sounds/music.mp3', 
+    soundFile: '/sounds/encontro_dos_seresteiros_compressed.mp3', 
     name: 'Encontro de Seresteiros.',
     image: '/point_imgs/point3.png', 
     description: 'Uma noite inesquecível com os melhores seresteiros da região.'},
@@ -104,7 +104,8 @@ const SoundMapComponent: React.FC = () => {
                   <Button
                     onClick={() => activePointId === point.id && isPlaying ? stopSound() : playSound(point.soundFile, point.id)}
                     variant={activePointId === point.id && isPlaying ? "secondary" : "default"}
-                    className="mb-2"
+                    className="mb-2 text-primary border border-primary bg-orange-100
+                    hover:text-background hover:bg-primary"
                   >
                     {activePointId === point.id && isPlaying ? <VolumeX className="mr-2 h-4 w-4" /> : <Volume2 className="mr-2 h-4 w-4" />}
                     {activePointId === point.id && isPlaying ? 'Parar' : 'Reproduzir'}

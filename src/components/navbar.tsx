@@ -63,7 +63,7 @@ export function Navbar() {
                 Mapa Sonoro
               </Link>
               <Link
-                href="/"
+                href="#sobre"
                 className="tracking-wide text-lg py-4 px-2 text-foreground font-semibold hover:text-primary transition duration-200"
               >
                 O Projeto

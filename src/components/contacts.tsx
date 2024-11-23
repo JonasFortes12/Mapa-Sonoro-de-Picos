@@ -22,7 +22,27 @@ export default function Contacts () {
                 Preencha o formulário abaixo para enviar sua mensagem.
               </p>
             </div>
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e: React.FormEvent<HTMLFormElement>) => {
+                e.preventDefault(); // Evita o comportamento padrão do formulário
+
+                // Capturar os valores dos inputs
+                const name = (document.getElementById('name') as HTMLInputElement).value;
+                const user_email = (document.getElementById('email') as HTMLInputElement).value;
+                const subject = (document.getElementById('subject') as HTMLInputElement).value;
+                const message = (document.getElementById('message') as HTMLTextAreaElement).value;
+                const email_target = 'anaestermatos483@gmail.com'
+
+                // Montar o link mailto
+                const mailtoLink = `mailto:${email_target}?subject=${encodeURIComponent(
+                  subject
+                )}&body=${encodeURIComponent(
+                  `Olá,\n\nMeu nome é ${name}.\n\n${message}\n\nAtenciosamente, ${name}\n${user_email}`
+                )}`;
+
+                // Abrir o cliente de e-mail
+                window.location.href = mailtoLink;
+              }}>
+                
               <div className="space-y-2">
                 <Label htmlFor="name">Nome</Label>
                 <Input id="name" placeholder="Seu nome completo" required />
@@ -74,12 +94,19 @@ export default function Contacts () {
                   <p className="text-sm text-gray-500 mb-4">
                     Entre melodias, ruídos e ritmos: sonoridades urbanas na cidade de Picos-PI, nas décadas de 1980 e 1990
                   </p>
-                  <Button className="w-full font-semibold
-                   text-primary border border-primary bg-orange-100 
-                   hover:text-background hover:bg-primary" variant="outline">
-                    Acessar
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <a 
+                    href="https://ufpi.br/biblioteca-digital-de-monografias-cshnb-bdm/50823-historia" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full"
+                  >
+                    <Button className="w-full font-semibold
+                    text-primary border border-primary bg-orange-100 
+                    hover:text-background hover:bg-primary" variant="outline">
+                      Acessar
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
               
@@ -91,12 +118,19 @@ export default function Contacts () {
                   <p className="text-sm text-gray-500 mb-4">
                     "Cidade do Barulho": análise histórica das sonoridades urbanas da cidade de Picos-PI (década de 1990)
                   </p>
-                  <Button className="w-full font-semibold
-                   text-primary border border-primary bg-orange-100 
-                   hover:text-background hover:bg-primary" variant="outline">
-                    Acessar
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <a 
+                    href="http://repositorio.ufpi.br:8080/xmlui/" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full"
+                  >
+                    <Button className="w-full font-semibold
+                    text-primary border border-primary bg-orange-100 
+                    hover:text-background hover:bg-primary" variant="outline">
+                      Acessar
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
               
@@ -108,12 +142,19 @@ export default function Contacts () {
                   <p className="text-sm text-gray-500 mb-4">
                     Acesse o currículo acadêmico de Ana Ester Matos Silva
                   </p>
-                  <Button className="w-full font-semibold
-                   text-primary border border-primary bg-orange-100
-                   hover:text-background hover:bg-primary" variant="outline">
-                    Acessar
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
+                  <a 
+                    href="http://lattes.cnpq.br/3307191696748619" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-full"
+                  > 
+                    <Button className="w-full font-semibold
+                    text-primary border border-primary bg-orange-100
+                    hover:text-background hover:bg-primary" variant="outline">
+                      Acessar
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
 
