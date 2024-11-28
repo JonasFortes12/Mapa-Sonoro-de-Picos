@@ -10,7 +10,7 @@ import { GiPartyPopper } from "react-icons/gi";
 import { FaGuitar } from "react-icons/fa6";
 
 // imagens de boas vindas
-const images = ["/picos-1.jpg", "/picos-2.jpg", "/picos-3.jpg"];
+const images = ["/picos-1_11zon.webp", "/picos-2_11zon.webp", "/picos-3_11zon.webp"];
 
 const Intro = () => {
 
