@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { use, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'; // Supondo que ShadcnUI tem um componente de carrossel.
 import Autoplay from "embla-carousel-autoplay"
 import Typist from 'react-typist-component';
@@ -9,13 +9,35 @@ import { IoMdMusicalNotes } from "react-icons/io";
 import { GiPartyPopper } from "react-icons/gi";
 import { FaGuitar } from "react-icons/fa6";
 
+// imagens de boas vindas
+const images = ["/picos-1.jpg", "/picos-2.jpg", "/picos-3.jpg"];
 
 const Intro = () => {
+
+  const [currentImage, setCurrentImage] = React.useState(0);
+  const [fade, setFade] = React.useState(false);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFade(true); // Inicia o efeito de fade-out
+      setTimeout(() => {
+        setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+        setFade(false); // Aplica o fade-in
+      }, 500); // Duração do fade-out
+    }, 5000); // Tempo entre as mudanças de imagens
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row h-screen bg-orange-100">
     
       {/* Lado esquerdo com a imagem de fundo e texto de boas-vindas */}
-      <div className="flex-1 bg-cover bg-center relative h-screen" style={{ backgroundImage: "url('/picos.jpg')" }}>
+      <div className={`flex-1 bg-cover bg-center relative h-screen transition-opacity duration-500 ${
+          fade ? "opacity-0" : "opacity-100"} `} 
+        style={{ backgroundImage: `url(${images[currentImage]})` }}
+      >
+
         <div className="absolute inset-0 bg-orange-500 bg-opacity-45 flex items-center justify-center">
           
           <Typist typingDelay={100} cursor={<span className='cursor'>|</span>} loop={true}>
@@ -30,7 +52,7 @@ const Intro = () => {
       </div>
 
       {/* Lado direito com o carrossel de texto explicativo */}
-      <div className="flex-1 flex items-center justify-center bg-orange-100 p-5">
+      <div className="flex-1 flex items-center justify-center p-5">
         
         <Carousel className="w-3/4 h-max"
         plugins={[
