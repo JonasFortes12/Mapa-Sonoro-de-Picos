@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Volume2, VolumeX } from 'lucide-react'
 import { FaMousePointer, FaVolumeUp, FaListOl } from 'react-icons/fa'
+import { HiCursorClick } from "react-icons/hi";
 
 interface SoundPoint {
   id: number
@@ -97,7 +98,7 @@ const SoundMapComponent: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card className='hover:shadow-lg transition-shadow'>
           <CardContent className="flex flex-col items-center p-6">
-            <FaMousePointer className="text-4xl mb-4 text-primary" />
+            <HiCursorClick className="text-4xl mb-4 text-primary" />
             <h3 className="text-lg font-semibold mb-2">Navegação no Mapa</h3>
             <p className="text-center">Use o scroll para zoom e clique e arraste para mover o mapa.</p>
           </CardContent>
