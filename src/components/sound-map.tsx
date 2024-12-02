@@ -24,10 +24,10 @@ const soundPoints: SoundPoint[] = [
     soundFile: '/sounds/asas_do_pagode_compressed.mp3', 
     name: 'Asas do Pagode, 1998.' ,
     image: '/point_imgs/point1.png', 
-    description: 'Um encontro animado com o grupo Asas do Pazgode em 1998.'},
+    description: 'Um encontro animado com o grupo Asas do Pagode em 1998.'},
 
   { id: 2, position: [-7.079547, -41.433069], 
-    soundFile: '/sounds/show_de_calouros_compressed.mp3', 
+    soundFile: '/sounds/show_de_calouros_parte01_compressed.mp3', 
     name: 'Show de Calouros, 1992.',
     image: '/point_imgs/point2.png', 
     description: 'Um evento memorável com talentos locais em 1992.' },

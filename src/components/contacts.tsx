@@ -92,7 +92,7 @@ export default function Contacts () {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-500 mb-4">
-                    Entre melodias, ruídos e ritmos: sonoridades urbanas na cidade de Picos-PI, nas décadas de 1980 e 1990
+                    Entre melodias, ruídos e ritmos: sonoridades urbanas na cidade de Picos-PI, nas décadas de 1980 e 1990.
                   </p>
                   <a 
                     href="https://ufpi.br/biblioteca-digital-de-monografias-cshnb-bdm/50823-historia" 
@@ -116,7 +116,7 @@ export default function Contacts () {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-500 mb-4">
-                    "Cidade do Barulho": análise histórica das sonoridades urbanas da cidade de Picos-PI (década de 1990)
+                    "Cidade do Barulho": análise histórica das sonoridades urbanas da cidade de Picos-PI (década de 1990).
                   </p>
                   <a 
                     href="http://repositorio.ufpi.br:8080/xmlui/" 
@@ -140,7 +140,7 @@ export default function Contacts () {
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-gray-500 mb-4">
-                    Acesse o currículo acadêmico de Ana Ester Matos Silva
+                    Acesse o currículo acadêmico de <span className='font-semibold'>Ana Ester de Matos Silva</span>.
                   </p>
                   <a 
                     href="http://lattes.cnpq.br/3307191696748619" 
