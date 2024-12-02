@@ -20,18 +20,18 @@ export default function Home() {
         <Intro/>
       </section>
 
-      <section id="mapa" className="container lg:my-16 md:my-8 sm:my-8 h-auto p-10">
+      <section id="mapa" className="container mx-auto lg:my-16 md:my-8 sm:my-8 h-auto p-10">
         <SectionTitle>Mapa Sonoro</SectionTitle>
         <SoundMap/>
       </section>
 
-      <section id="sobre" className="container lg:my-16 md:my-8 sm:my-8 h-auto p-10">
+      <section id="sobre" className="container mx-auto lg:my-16 md:my-8 sm:my-8 h-auto p-10">
         <SectionTitle>Sobre o Projeto</SectionTitle>
         <AboutProject/>
         
       </section>
 
-      <section id="contatos" className="container lg:my-16 md:my-8 sm:my-8 h-auto p-10">
+      <section id="contatos" className="container mx-auto lg:my-16 md:my-8 sm:my-8 h-auto p-10">
         <SectionTitle>Contatos</SectionTitle>
         <Contacts/>
       </section>

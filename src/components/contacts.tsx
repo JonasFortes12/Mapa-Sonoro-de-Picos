@@ -80,7 +80,7 @@ export default function Contacts () {
             <div className="space-y-2">
               <h2 className="text-2xl font-bold">Trabalhos Acadêmicos</h2>
               <p className="text-gray-500 dark:text-gray-400">
-                Para ter acesso aos trabalhos de Ana Ester de Matos Silva acesse os seguintes links:
+                Para ter acesso aos trabalhos de <span className='font-semibold'>Ana Ester de Matos Silva</span> acesse os seguintes links:
               </p>
             </div>
 
